@@ -91,9 +91,6 @@ html, body, a, button, input, select, textarea, [role="button"] { cursor: none !
      <div class="cursor__text-one">
       <div class="p-body is--bgtext-white">Ver projeto</div>
      </div>
-     <div class="cursor__text-two">
-      <div class="p-body is--bgtext-white">Em breve</div>
-     </div>
      <div class="cursor__text-three">
       <div class="p-body is--bgtext-white">Galeria</div>
      </div>
@@ -203,9 +200,6 @@ body { overflow-x: hidden; }
             <div class="h5 number margin-left hidden-mobile">1</div>
             <div class="main-project__img-wrapper">
              <img src="assets/images/28.jpg" alt="Instalação Elétrica Residencial — Londrina" class="proj-placeholder" data-w-id="3dcb1c75-656e-17bc-1306-ca863e9d52a8" style="object-fit:cover;display:block;">
-             <div class="project__overlay-non-link">
-              <div class="p-body is--bgtext-white">Em breve</div>
-             </div>
             </div>
            </div>
            <div class="spacing-block small desktop-tablet"></div>
@@ -228,9 +222,6 @@ body { overflow-x: hidden; }
             <div class="h5 number hidden-mobile">2</div>
             <div class="main-project__img-wrapper">
              <img src="assets/images/36.jpeg" alt="SPDA Industrial — Cambé" class="proj-placeholder" data-w-id="c0d2db92-14d8-cb68-1143-518a5344c55d" style="object-fit:cover;display:block;">
-             <div class="project__overlay-non-link">
-              <div class="p-body is--bgtext-white">Em breve</div>
-             </div>
             </div>
            </div>
            <div class="projects-int__left-wrapper second">
@@ -256,9 +247,6 @@ body { overflow-x: hidden; }
             <div class="h5 number margin-left hidden-mobile">3</div>
             <div class="main-project__img-wrapper">
              <img src="assets/images/37.jpeg" alt="Laudo Técnico Comercial — Rolândia" class="proj-placeholder" data-w-id="cf1aa4a2-9a16-0261-4771-5818be3590d3" style="object-fit:cover;display:block;">
-             <div class="project__overlay-non-link">
-              <div class="p-body is--bgtext-white">Em breve</div>
-             </div>
             </div>
            </div>
           </div>
@@ -276,9 +264,6 @@ body { overflow-x: hidden; }
             <div class="h5 number hidden-mobile">4</div>
             <div class="main-project__img-wrapper">
              <img src="assets/images/6.jpg" alt="Manutenção Preventiva — Arapongas" class="proj-placeholder" style="object-fit:cover;display:block;">
-             <div class="project__overlay-non-link">
-              <div class="p-body is--bgtext-white">Em breve</div>
-             </div>
             </div>
            </div>
            <div class="projects-int__left-wrapper second">
@@ -419,10 +404,10 @@ setTimeout(() => {$(window).on("resize", function () {
 gsap.fromTo(".nav__link", {opacity: 0, y: "-16"}, {opacity: 1, y: 0, delay: 0.8, duration: 0.6, stagger: 0.1, ease: "Power2.easeOut"});
 gsap.fromTo(".navbar__bg", {height: "0%"}, {height: "100%", delay: 0.9, duration: 0.6});
 
-$('a, .btn-submit, .project__overlay-non-link, .embed__location, .contact-form__field').on('mouseenter', function() {
+$('a, .btn-submit, .embed__location, .contact-form__field').on('mouseenter', function() {
   $('.cursor-line-one, .cursor-line-two').addClass('no-width-height');
 });
-$('a, .btn-submit, .project__overlay-non-link, .embed__location, .contact-form__field').on('mouseleave', function() {
+$('a, .btn-submit, .embed__location, .contact-form__field').on('mouseleave', function() {
   $('.cursor-line-one, .cursor-line-two').removeClass('no-width-height');
 });
 $('a, .btn-submit, .img-full').on('mouseenter', function() {
@@ -443,16 +428,6 @@ $('.project__overlay-link').on('mouseenter', function() {
 });
 $('.project__overlay-link').on('mouseleave', function() {
   $('.cursor__text-one').removeClass('show');
-  $('.cursor__square').removeClass('scale-down');
-});
-$('.project__overlay-non-link').on('mouseenter', function() {
-  $('.cursor__child').addClass('background-arrow');
-  $('.cursor__text-two').addClass('show');
-  $('.cursor__square').addClass('scale-down');
-});
-$('.project__overlay-non-link').on('mouseleave', function() {
-  $('.cursor__child').removeClass('background-arrow');
-  $('.cursor__text-two').removeClass('show');
   $('.cursor__square').removeClass('scale-down');
 });
 $('.section__footer').on('mouseenter', function() {

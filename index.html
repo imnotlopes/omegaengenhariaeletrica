@@ -92,9 +92,6 @@ html, body, a, button, input, select, textarea, [role="button"] { cursor: none !
      <div class="cursor__text-one">
       <div class="p-body is--bgtext-white">Ver projeto</div>
      </div>
-     <div class="cursor__text-two">
-      <div class="p-body is--bgtext-white">Em breve</div>
-     </div>
      <div class="cursor__text-three">
       <div class="p-body is--bgtext-white">Galeria</div>
      </div>
@@ -602,10 +599,10 @@ setTimeout(() => {$(window).on("resize", function () {
 gsap.fromTo(".nav__link", {opacity: 0, y: "-16"}, {opacity: 1, y: 0, delay: 0.8, duration: 0.6, stagger: 0.1, ease: "Power2.easeOut"});
 gsap.fromTo(".navbar__bg", {height: "0%"}, {height: "100%", delay: 0.9, duration: 0.6});
 
-$('a, .btn-submit, .project__overlay-non-link, .embed__location, .contact-form__field').on('mouseenter', function() {
+$('a, .btn-submit, .embed__location, .contact-form__field').on('mouseenter', function() {
   $('.cursor-line-one, .cursor-line-two').addClass('no-width-height');
 });
-$('a, .btn-submit, .project__overlay-non-link, .embed__location, .contact-form__field').on('mouseleave', function() {
+$('a, .btn-submit, .embed__location, .contact-form__field').on('mouseleave', function() {
   $('.cursor-line-one, .cursor-line-two').removeClass('no-width-height');
 });
 $('a, .btn-submit, .img-full').on('mouseenter', function() {
@@ -630,16 +627,6 @@ $('.project__overlay-link, .contact-form__field').on('mouseenter', function() {
   $('.cursor__square').addClass('scale-down');
 });
 $('.project__overlay-link, .contact-form__field').on('mouseleave', function() {
-  $('.cursor__square').removeClass('scale-down');
-});
-$('.project__overlay-non-link').on('mouseenter', function() {
-  $('.cursor__child').addClass('background-arrow');
-  $('.cursor__text-two').addClass('show');
-  $('.cursor__square').addClass('scale-down');
-});
-$('.project__overlay-non-link').on('mouseleave', function() {
-  $('.cursor__child').removeClass('background-arrow');
-  $('.cursor__text-two').removeClass('show');
   $('.cursor__square').removeClass('scale-down');
 });
 $('.section__footer').on('mouseenter', function() {
