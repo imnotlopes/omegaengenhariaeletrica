@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omega-engenharia.com.br/sitemap.xml
