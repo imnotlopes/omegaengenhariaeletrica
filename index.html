@@ -86,31 +86,6 @@ html, body, a, button, input, select, textarea, [role="button"] { cursor: none !
 .projects-home__visual-wrapper { opacity: 1 !important; transform: none !important; }
 .home-hero__img-overlay { width: 0 !important; }
 
-/* ---- Reviews Section ---- */
-.section__reviews { background-color: #ffffff !important; background: #ffffff !important; padding: 5rem 0 4rem; overflow: visible !important; }
-.section__reviews, .section__reviews * { box-sizing: border-box; }
-.reviews__header { text-align: center; margin-bottom: 3rem; }
-.reviews__badge { display: inline-block; padding: 0.3rem 1rem; background: rgba(201,168,76,0.13); border-radius: 999px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: #C9A84C; margin-bottom: 1.2rem; }
-.reviews__title { color: #0A1628; font-family: inherit; }
-.reviews__google-line { display: flex; align-items: center; justify-content: center; gap: 0.55rem; flex-wrap: wrap; margin-top: 1rem; }
-.reviews__google-icon { flex-shrink: 0; }
-.reviews__rating-number { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1rem; color: #0A1628; }
-.reviews__stars-main { color: #C9A84C; font-size: 0.95rem; letter-spacing: 0.04em; }
-.reviews__total { color: rgba(10,22,40,0.45); font-family: 'Inter', sans-serif; font-size: 0.82rem; }
-.reviews-swiper { padding-bottom: 3.5rem !important; overflow: hidden; }
-.reviews-swiper .swiper-wrapper { align-items: stretch; }
-.review-card { background: #fff; border-radius: 16px; box-shadow: 0 2px 20px rgba(10,22,40,0.09), 0 0 0 1px rgba(10,22,40,0.06); overflow: hidden; display: flex; flex-direction: column; height: 100%; }
-.review-card__img-wrap { position: relative; width: 100%; height: 200px; overflow: hidden; flex-shrink: 0; }
-.review-card__photo { width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; }
-.review-card__img-gradient { position: absolute; bottom: 0; left: 0; right: 0; height: 50%; background: linear-gradient(to bottom, transparent, #ffffff); pointer-events: none; z-index: 1; }
-.review-card__body { padding: 1.1rem 1.4rem 1.4rem; flex: 1; display: flex; flex-direction: column; }
-.review-card__stars { color: #C9A84C; font-size: 0.95rem; letter-spacing: 0.04em; margin-bottom: 0.55rem; }
-.review-card__text { font-family: 'Inter', sans-serif; font-size: 0.87rem; line-height: 1.75; color: #1a2b45; flex: 1; margin-bottom: 0.85rem; }
-.review-card__footer { display: flex; flex-direction: column; gap: 0.12rem; padding-top: 0.75rem; border-top: 1px solid rgba(10,22,40,0.07); margin-top: auto; }
-.review-card__name { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.84rem; color: #0A1628; }
-.review-card__time { font-family: 'Inter', sans-serif; font-size: 0.74rem; color: rgba(10,22,40,0.4); }
-.reviews-swiper .swiper-pagination-bullet { background: rgba(10,22,40,0.18) !important; opacity: 1; width: 8px; height: 8px; transition: all 0.3s ease; }
-.reviews-swiper .swiper-pagination-bullet-active { background: #C9A84C !important; width: 24px; border-radius: 4px; }
   </style>
  </head>
  <body>
@@ -466,143 +441,6 @@ body { overflow-x: hidden; }
     </div>
    </section>
   </main>
-  <!-- ===== GOOGLE REVIEWS — fora do main-wrapper para evitar override do Webflow JS ===== -->
-  <section class="section__reviews" id="depoimentos">
-   <div class="page-spacing__large">
-    <div class="container-medium">
-     <div class="reviews__header">
-      <span class="reviews__badge">Depoimentos</span>
-      <h2 class="h3 reviews__title">
-       O que nossos clientes dizem
-      </h2>
-      <div class="reviews__google-line">
-       <svg class="reviews__google-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-label="Google"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-       <span class="reviews__rating-number">5,0</span>
-       <span class="reviews__stars-main" aria-label="5 estrelas">★★★★★</span>
-       <span class="reviews__total">· 28 avaliações no Google</span>
-      </div>
-     </div>
-     <div class="swiper reviews-swiper">
-      <div class="swiper-wrapper">
-       <div class="swiper-slide review-card">
-        <div class="review-card__img-wrap">
-         <div class="review-card__photo" style="background-image:url('assets/images/36.jpeg');"></div>
-         <div class="review-card__img-gradient"></div>
-        </div>
-        <div class="review-card__body">
-         <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-         <p class="review-card__text">O Hugo nos chamou com um problema urgente — identificamos a falha imediatamente e resolvemos tudo com segurança. Graças a isso, ele evitou uma noite inteira sem energia elétrica. Saiu aliviado e recomendou sem hesitar.</p>
-         <div class="review-card__footer">
-          <span class="review-card__name">Hugo</span>
-          <span class="review-card__time">6 meses atrás</span>
-         </div>
-        </div>
-       </div>
-       <div class="swiper-slide review-card">
-        <div class="review-card__img-wrap">
-         <div class="review-card__photo" style="background-image:url('assets/images/17.png');"></div>
-         <div class="review-card__img-gradient"></div>
-        </div>
-        <div class="review-card__body">
-         <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-         <p class="review-card__text">A Suzy já nos chamou duas vezes — uma por curto-circuito, outra por disjuntor queimado. As duas: problema resolvido rápido, preço justo e um atendimento que conquistou a confiança dela de vez.</p>
-         <div class="review-card__footer">
-          <span class="review-card__name">Suzy Letty</span>
-          <span class="review-card__time">2 anos atrás · Local Guide</span>
-         </div>
-        </div>
-       </div>
-       <div class="swiper-slide review-card">
-        <div class="review-card__img-wrap">
-         <div class="review-card__photo" style="background-image:url('assets/images/28.png');"></div>
-         <div class="review-card__img-gradient"></div>
-        </div>
-        <div class="review-card__body">
-         <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-         <p class="review-card__text">O Wellington carregava um problema crônico deixado pela construtora do seu apartamento. Resolvemos rapidamente e ainda fizemos um serviço preventivo para garantir que não voltasse a acontecer.</p>
-         <div class="review-card__footer">
-          <span class="review-card__name">Wellington Henry</span>
-          <span class="review-card__time">1 ano atrás</span>
-         </div>
-        </div>
-       </div>
-       <div class="swiper-slide review-card">
-        <div class="review-card__img-wrap">
-         <div class="review-card__photo" style="background-image:url('assets/images/23.png');"></div>
-         <div class="review-card__img-gradient"></div>
-        </div>
-        <div class="review-card__body">
-         <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-         <p class="review-card__text">O Heber ficou surpreso do começo ao final: chegamos no horário combinado, entregamos nota detalhada e especificada, e deixamos tudo organizado e limpo. Palavras dele: nos surpreendeu do início ao final, sem exceção.</p>
-         <div class="review-card__footer">
-          <span class="review-card__name">Heber De Lima Santos</span>
-          <span class="review-card__time">4 semanas atrás</span>
-         </div>
-        </div>
-       </div>
-       <div class="swiper-slide review-card">
-        <div class="review-card__img-wrap">
-         <div class="review-card__photo" style="background-image:url('assets/images/16.png');"></div>
-         <div class="review-card__img-gradient"></div>
-        </div>
-        <div class="review-card__body">
-         <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-         <p class="review-card__text">O Thiago já nos contratou mais de uma vez e continua confiando no nosso trabalho. Para ele: um profissional que resolve com qualidade e prestatividade do início ao fim. Confiança construída projeto a projeto.</p>
-         <div class="review-card__footer">
-          <span class="review-card__name">Thiago Caparroz</span>
-          <span class="review-card__time">4 anos atrás</span>
-         </div>
-        </div>
-       </div>
-       <div class="swiper-slide review-card">
-        <div class="review-card__img-wrap">
-         <div class="review-card__photo" style="background-image:url('assets/images/19.png');"></div>
-         <div class="review-card__img-gradient"></div>
-        </div>
-        <div class="review-card__body">
-         <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-         <p class="review-card__text">O Osny chegou até nós após uma enorme frustração com outro profissional que o deixou na mão. Mesmo encontrando dificuldades pelo serviço anterior, organizamos tudo de forma profissional e entregamos o resultado esperado.</p>
-         <div class="review-card__footer">
-          <span class="review-card__name">Osny Vasconcellos</span>
-          <span class="review-card__time">1 ano atrás</span>
-         </div>
-        </div>
-       </div>
-       <div class="swiper-slide review-card">
-        <div class="review-card__img-wrap">
-         <div class="review-card__photo" style="background-image:url('assets/images/21.png');"></div>
-         <div class="review-card__img-gradient"></div>
-        </div>
-        <div class="review-card__body">
-         <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-         <p class="review-card__text">A Silvana descreveu nosso serviço como de altíssima qualidade — ágil, responsável e com total atenção ao cliente. Palavras dela: resolutivo e atencioso em cada detalhe do trabalho.</p>
-         <div class="review-card__footer">
-          <span class="review-card__name">Silvana L. Santos</span>
-          <span class="review-card__time">3 anos atrás</span>
-         </div>
-        </div>
-       </div>
-       <div class="swiper-slide review-card">
-        <div class="review-card__img-wrap">
-         <div class="review-card__photo" style="background-image:url('assets/images/37.jpeg');"></div>
-         <div class="review-card__img-gradient"></div>
-        </div>
-        <div class="review-card__body">
-         <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-         <p class="review-card__text">O Adriano ficou satisfeito com o atendimento, a qualidade e o preço justo. Ele já garantiu: vai nos chamar de novo em outras oportunidades. Obrigado, irmão — foi um prazer atender!</p>
-         <div class="review-card__footer">
-          <span class="review-card__name">Adriano Martins</span>
-          <span class="review-card__time">10 meses atrás</span>
-         </div>
-        </div>
-       </div>
-      </div>
-      <div class="swiper-pagination reviews-pagination"></div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- ===== /GOOGLE REVIEWS ===== -->
   <section class="section__cta is--bg-pale">
    <div class="page-spacing__medium cta">
     <div class="container-none">
@@ -956,21 +794,6 @@ new Swiper('.reviews-swiper', {
   }
 });
 
-/* Safety net: force white background on reviews section regardless of any dynamic JS */
-(function() {
-  function forceReviewsBg() {
-    var el = document.getElementById('depoimentos');
-    if (el) {
-      el.style.setProperty('background-color', '#ffffff', 'important');
-      el.style.setProperty('background', '#ffffff', 'important');
-    }
-  }
-  forceReviewsBg();
-  document.addEventListener('DOMContentLoaded', forceReviewsBg);
-  window.addEventListener('load', forceReviewsBg);
-  setTimeout(forceReviewsBg, 300);
-  setTimeout(forceReviewsBg, 1000);
-})();
 
 function initCounter(prop) {
   const counters = document.querySelectorAll(prop.element);
