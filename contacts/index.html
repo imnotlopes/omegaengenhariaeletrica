@@ -213,17 +213,15 @@ body { overflow-x: hidden; }
        <div class="contacts__parent">
         <div class="contact-form__wrapper stagger">
          <div class="contact-form w-form">
-          <form class="contact-form__child" action="https://formsubmit.co/omega.engenharia1@outlook.com" method="POST" name="contato-omega">
-           <input type="hidden" name="_subject" value="Novo contato via site OMEGA Engenharia"/>
-           <input type="hidden" name="_captcha" value="false"/>
+          <form class="contact-form__child" id="form-contato" name="contato-omega" onsubmit="enviarWhatsApp(event)">
            <div class="contact-form__row">
             <div class="contact-form__item">
              <label class="p-small" for="nome">Nome*</label>
-             <input class="contact-form__field w-input" id="nome" maxlength="256" name="nome" placeholder="" required="" type="text"/>
+             <input class="contact-form__field w-input" id="nome" maxlength="256" name="nome" placeholder="" required="" type="text" autocomplete="name"/>
             </div>
             <div class="contact-form__item">
              <label class="p-small" for="telefone">Telefone*</label>
-             <input class="contact-form__field w-input" id="telefone" maxlength="256" name="telefone" placeholder="" required="" type="tel"/>
+             <input class="contact-form__field w-input" id="telefone" maxlength="256" name="telefone" placeholder="" required="" type="tel" autocomplete="tel"/>
             </div>
            </div>
            <div class="contact-form__item full-width">
@@ -243,21 +241,37 @@ body { overflow-x: hidden; }
            </div>
            <div class="contact-form__buttons-wrapper">
             <div class="contact-buttons">
-             <a class="button w-inline-block" hoverstagger="link2" href="#" onclick="this.closest('form').submit(); return false;" style="background-color:rgb(0,0,0);border-color:rgba(0,0,0,0)">
+             <button class="button w-inline-block" type="submit" hoverstagger="link2" style="background-color:rgb(0,0,0);border-color:rgba(0,0,0,0);cursor:pointer;">
               <div class="div-hide">
-               <div class="btn-text" hoverstagger="text2">Enviar Mensagem</div>
-               <div class="btn-text is--2 is--bgtext-black" hoverstagger="text2">Enviar Mensagem</div>
+               <div class="btn-text" hoverstagger="text2">Enviar pelo WhatsApp</div>
+               <div class="btn-text is--2 is--bgtext-black" hoverstagger="text2">Enviar pelo WhatsApp</div>
               </div>
-             </a>
+             </button>
             </div>
            </div>
           </form>
-          <div class="success-message w-form-done" style="display:none;">
-           <div class="p-body">Obrigado! Sua mensagem foi enviada com sucesso. Retornaremos em breve.</div>
+          <div class="success-message w-form-done" id="form-sucesso" style="display:none;">
+           <div class="p-body">✓ Redirecionando para o WhatsApp... Se não abrir automaticamente, <a href="https://wa.me/5543991357674" target="_blank" style="color:#C9A84C;">clique aqui</a>.</div>
           </div>
-          <div class="error-message w-form-fail" style="display:none;">
-           <div class="p-body">Ops. Algo deu errado. Tente novamente ou entre em contato pelo WhatsApp.</div>
-          </div>
+          <script>
+          function enviarWhatsApp(e) {
+            e.preventDefault();
+            var nome     = document.getElementById('nome').value.trim();
+            var telefone = document.getElementById('telefone').value.trim();
+            var servico  = document.getElementById('servico').value;
+            var mensagem = document.getElementById('mensagem').value.trim();
+            var texto =
+              'Olá! Vim pelo site da OMEGA Engenharia e gostaria de solicitar um orçamento.\n\n' +
+              '*Nome:* ' + nome + '\n' +
+              '*Telefone:* ' + telefone + '\n' +
+              '*Serviço:* ' + servico + '\n' +
+              '*Mensagem:* ' + mensagem;
+            var url = 'https://wa.me/5543991357674?text=' + encodeURIComponent(texto);
+            document.getElementById('form-contato').style.display = 'none';
+            document.getElementById('form-sucesso').style.display = 'block';
+            window.open(url, '_blank');
+          }
+          </script>
          </div>
         </div>
         <div class="contacts__info-wrapper stagger">
